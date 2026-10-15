@@ -1,0 +1,15 @@
+# Claves y configuración privada
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+
+# Editor y sistema
+.vscode/
+.DS_Store
