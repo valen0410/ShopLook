@@ -131,3 +131,8 @@ def crear_resenia(local_id: int, resenia: ReseniaIn):
             return dict(fila._mapping)
     except IntegrityError:
         raise HTTPException(status_code=404, detail="Local o usuaria inexistente")
+    
+
+@app.get("/categorias")
+def get_categorias():
+    return consultar("SELECT id, nombre, id_padre FROM categoria ORDER BY nombre")
