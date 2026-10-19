@@ -1,5 +1,13 @@
 import './App.css'
 
+const categorias = [
+  { nombre: 'Cerca mío', icono: '📍' },
+  { nombre: 'Vestidos', icono: '👗' },
+  { nombre: 'Ofertas', icono: '🏷️' },
+  { nombre: 'Mayoristas', icono: '🏬' },
+  { nombre: 'Calzado', icono: '👟' },
+]
+
 function App() {
   return (
     <div className="app">
@@ -25,6 +33,15 @@ function App() {
           </div>
         </div>
       </header>
+
+      <section className="categorias">
+        {categorias.map((cat) => (
+          <button key={cat.nombre} className="categoria">
+            <span className="categoria-icono">{cat.icono}</span>
+            <span className="categoria-nombre">{cat.nombre}</span>
+          </button>
+        ))}
+      </section>
     </div>
   )
 }
